@@ -24,7 +24,7 @@ int main()
     int fd,retval;
     struct stats *user_ptr; 
     
-    unsigned int GetBaudRate;
+
     fd = open("/dev/Dev_ioctl",O_RDWR,0777);
     if(fd<0)
     {

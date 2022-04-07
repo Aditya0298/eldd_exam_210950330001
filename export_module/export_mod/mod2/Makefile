@@ -1,4 +1,4 @@
-obj-m := char_drv_ioctl.o
+obj-m := mod1.o mod2.o
 
 KDIR=/lib/modules/$(shell uname -r)/build/
 
@@ -6,8 +6,7 @@ PWD=$(shell pwd)
 
 all:
 		make -C $(KDIR) M=$(PWD) modules
-		gcc -o uconfig uconfig.c
-		
+
 install:
 		make -C $(KDIR) M=$(PWD) modules_install
 
